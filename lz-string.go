@@ -19,7 +19,7 @@ func Compress(uncompressed string, keyStrBase64 string) string {
 		keyStrBase64 = _defaultKeyStrBase64
 	}
 	charArr := []rune(keyStrBase64)
-	res := _compress(uncompressed, 6, func(character int) string {
+	res := Ccompress(uncompressed, 6, func(character int) string {
 		return string(charArr[character])
 	})
 	switch len(res) % 4 {
