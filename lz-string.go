@@ -36,7 +36,7 @@ func Compress(uncompressed string, keyStrBase64 string) string {
 	return res
 }
 
-func _compress(uncompressed string, bitsPerChar int, getCharFromInt func(character int) string) string {
+func Ccompress(uncompressed string, bitsPerChar int, getCharFromInt func(character int) string) string {
 	if len(uncompressed) == 0 {
 		return ""
 	}
